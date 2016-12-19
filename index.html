@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dream Books</title>
+<link rel="stylesheet" type="text/css" href="css/normalise.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="Extensions/prettyPhoto_compressed_3.1.5/css/prettyPhoto.css">
+</head>
+<body>
+<script type="text/javascript" src="Extensions/prettyPhoto_compressed_3.1.5/js/jquery-1.6.1.min.js">
+</script>
+<script src="Extensions/prettyPhoto_compressed_3.1.5/js/jquery.prettyPhoto.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("a[rel^='prettyPhoto']").prettyPhoto();
+  });
+</script>
+<script type="text/javascript">
+	window.pic = 0
+	function picslide()
+	{
+		window.pic = window.pic + 1
+		window.pic
+		if (pic > 3)
+		{
+			pic = 0
+		}
+		if (pic == 0)
+		{
+			document.getElementById('mediatext').innerHTML = "<p>This is picture number 1 </p>" 	
+		}
+		if (pic == 1)
+		{
+			document.getElementById('mediatext').innerHTML = "<p>This is picture number 2 </p>" 	
+		}
+		if (pic == 2)
+		{
+			document.getElementById('mediatext').innerHTML = "<p>This is picture number 3 </p>" 	
+		}
+		if (pic == 3)
+		{
+			document.getElementById('mediatext').innerHTML = "<p>This is picture number 4 </p>" 	
+		}
+		position = pic * 940
+		$("#slide").stop().animate({marginLeft:"-" + position + "px"})
+	}
+	function picslideback()
+	{
+		window.pic = window.pic - 1
+		window.pic
+		if (pic < 0)
+		{
+			pic = 3
+		}
+		position = pic * 940
+		$("#slide").stop().animate({marginLeft:"-" + position + "px"})
+	}
+	function startpicslide()
+	{
+		slide = setInterval("picslide()", 2000)
+	}
+	function stoppicslide()
+	{
+		clearInterval(slide)
+	}
+	startpicslide()
+	
+</script>
+<div id="container">
+<div id="box-shadow" style="min-height:1900px;">
+	  <div id="header">
+       	  <a href="index.html"><img src="images/dreambooks.png" alt="dreambooks"/></a>
+          <table style="width:100%;"><tr>
+            <td style="text-align:center;"><a href="index.html" class="button">index</a></td>
+            <td style="text-align:center;"><a href="about.html" class="button">about</a></td>
+            <td style="text-align:center;"><a href="map.html" class="button">map</a></td>
+            <td style="text-align:center;"><a href="gallery.html" class="button">Gallery</a></td>
+            <td style="text-align:center;"><a href="conditions.html" class="button">conditions</a></td>
+            </tr></table>
+        </div>
+    <div id="mediabox" onMouseOver="stoppicslide()" onMouseOut="startpicslide()">
+      <div id="picback" onMouseDown="picslideback()"></div><div id="picfoward" onMouseDown="picslide()"></div><div id="slide"><a href="images/Library-1.png" rel="prettyPhoto"><img src="images/Library-1.png" alt="picture slider 1"></a><a href="images/Library-2.png" rel="prettyPhoto"><img src="images/Library-2.png" alt="picture slider 2"></a><a href="images/Library-3.png" rel="prettyPhoto"><img src="images/Library-3.png" alt="picture slider 3"></a><a href="images/Library-4.png" rel="prettyPhoto"><img src="images/Library-4.png" alt="picture slider 4"></a>
+        <div id="mediatext"><p>This is picture number 1 </p></div>
+      </div>
+  </div>
+        <div id="text" style="height:1240px; width:460px; margin-bottom:10px;">
+        <!--<div style="overflow-x:hidden; overflow-y:scroll; height:680px;">-->
+          <p><p style="color:#609;">Something for everyone</p>
+            On a typical day, more than 700 people visit the FictionLand Area Library. This full service public library district serves the residents of all or portions of the local area – more than 26,000 residents. We offer a collection of more than 125,000 books, periodicals, DVDs, and audio recordings, as well as a wide variety of state-of-the-art electronic resources, including free high-speed wired and wireless access to the Internet throughout the library. There truly is something for everyone!<br>
+            Nearly 6,000 reference questions are answered each month by the library’s well-trained staff. Hundreds of library events are scheduled throughout the year, specifically for children, young adults, families, and adults. These free programs are designed to entertain and inform, and to introduce the public to the library’s services. We hope you will visit us often and take advantage of all the library offers, whether to pick up tonight’s entertainment, hunker down with your research project or school work, attend a library program, or just cozy up with a good book. We invite you to relax, work at your own pace, and enjoy your library.<br>
+            <p style="color:#609;">Our awards are your awards</p>
+            When the current building opened in 1997, the library received the prestigious Distinguished Building Award from the Makebelieve Institute of Architects because of the lively, animated quality of its design. Library patrons enjoy scenic views of the protected wetlands through large floor-to-ceiling windows.<br>
+            In 2005, the FictionLand Area Library was named “Library of the Year” by the North Suburban Library System, for having taken “its unique mix of community focus, creativity, and collaboration to the next level of service excellence.”<br>
+            <p style="color:#609;">We are here to serve you</p>
+            The FictionLand Area Public Library District is self-governed by a seven-member Board of Library Trustees, and funded through local government incentives. Trustees are elected to four-year terms. The library has a diverse and well-trained staff of more than fifty full-time and part-time employees ready to assist you, including professional librarians with master’s degrees from FL-certified library and information science graduate schools.
+          <h3>Latest News and Information</h3>
+            <p style="color:#F90;">Tuesday, November 30, 2015</p>
+            <h4>54th Annual Childrens  Christmas Parade</h4>
+            The Fictionland Junior Chamber of Commerce presents this year's Christmas Parade - &quot;A Critter Christmas&quot; - Saturday, December 11th beginning at 9:30 a.m. The parade travels along Fictionland Street from Makebelieve High School to Sunny Day Park. See the web site for more information: <br>
+            http://www.fictionland.org/christmas
+          <p><h4>Jingle Bell Cruise &amp; Antique-a-thon</h4>
+            See pre-1974 American and Australian-made custom, classic and vintage vehicles and hot rods cruise Grand Avenue on December 4, 2015 from 12:00 p.m. to 5:00 p.m. For more information, contact the Fictionland Business Association at (0118)-999-88199-9119-725-3. 
+          <p><h4>Fictionland Council Awards</h4>
+            Each year at the State of the City meeting, the City Council recognises residents who have improved the quality of life in Fictionaldn through their volunteer service. If you know of an Fictionland resident who has made a significant impact to the community, please obtain a nomination form from the City Manager’s Office or download one from www.fictionland.org/government/awards. <br>
+            Categories include but are not limited to: Arts, Business, Charity, Community Beautification, Cultural Awareness, Education, Environment, Heroism and Historic Preservation. The deadline for nomination is 5:30 p.m., January 7, 2015.
+          <p><h4>Fictionland Recreation winter activities brochure</h4>
+            The City of Fictionland's Recreation Department has just released the Winter Activities brochure. Fictionland residents should receive a copy in the mail, but you can also browse classes and even register for some online: <br>
+            http://www.fictionland.org/recreation/</div><!--</div>-->
+     		 <div id="right-col-pic">
+                	<div class="slide1" style="float:left;"><img src="images/IMAGE_MAIN.png" alt="image main" width="440" height="306" /></div>
+            </div>
+            <div id="right-col-vid2"><iframe width="440" height="306" src="https://www.youtube.com/embed/uZBJuoUgBDY" allowfullscreen></iframe></div>
+        <div id="footer"><p>Dream Books© Fictionland© library established 2013</p></div>
+  </div>
+</div>
+</body>
+</html>

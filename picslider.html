@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<style type="text/css">
+#media
+{
+	width:405;
+	margin-left:10px;
+	margin-right:10px;
+	height:305px;
+	overflow:hidden;
+}
+#film
+{
+	width:1215px;
+	height:305px;	
+}
+.slide
+{
+	width:405px;
+	height:305px;
+	float:left;
+}
+</style>
+<script src="Extensions/prettyPhoto_compressed_3.1.5/js/jquery.prettyPhoto.js">
+</script>
+<script type="text/javascript" src="Extensions/prettyPhoto_compressed_3.1.5/js/jquery-1.6.1.min.js">
+</script>
+
+<script type="text/javascript">
+
+pic = 0;
+function movepics()
+{
+	pic = pic + 1
+	if (pic > 2)
+	{
+		pic = 0	
+	}
+	position = 405 * pic;
+	$("#film").animate({marginLeft: "-" + position + "px"})
+}
+
+	function stopanimation()
+	{
+		clearInterval(myAnimation)
+	}
+	function startanimation()
+	{
+		myAnimation = setInterval("movepics()", 5000)
+	}
+	startanimation()
+</script>
+
+	<div id="media" onmouseover="stopanimation()" onmouseout="startanimation()">
+        <div id="film">
+        	<div class="slide"><img src="images/IMAGE_MAIN.png" width="405px" height="305px" /></div>
+            <div class="slide"><img src="images/library-computers.png" /></div>
+            <div class="slide"><img src="images/brisbane.png" /></div>
+    	</div>
+	</div>
+</body>
+</html>
